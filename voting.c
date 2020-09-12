@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int limit,i,j,parties,vote,cnt[100],flag[100];
+    int limit,i,j,parties,vote,cnt[100],flag[100],party[100];
     printf("How many parties?");
     scanf("%d",&parties);
     printf("How many votes allowed on one EVM?");
@@ -24,7 +24,7 @@ int main()
     for(i=1;i<=parties;i++)
     {
         party[i]=cnt[i]+flag[i];
-        printf("Actual result:",party[i]);
+        printf("\nActual result: %d",party[i]);
     }
     for(i=1;i<=parties-1;i++)
     {
@@ -35,7 +35,8 @@ int main()
     {
         j=j+flag[i];
         party[parties]=cnt[parties]+j;
-        printf("manipulated result:",party[parties]);
+        printf("\nmanipulated result: %d",party[parties]);
     }
     return 0;
 }
+
