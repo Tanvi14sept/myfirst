@@ -23,16 +23,7 @@ void main()
 	}
 	puts("\n Enter the word to find:");
 	puts("Enter the word to replace it with:");
-	
-	gets(word1);
-	gets(replace1);
-	
-	gets(word2);
-	gets(replace2);
-	
-	gets(word3);
-	gets(replace3);
-	
+		
 	fprintf(out,"%s - %s\n",word1,replace1);
 	
 	fprintf(out,"%s - %s\n",word2,replace2);
@@ -44,20 +35,10 @@ void main()
 		fscanf(in,"%s",read);
 		if(strcmp(read,word1)==0)
 			strcpy(read,replace1);
-		fprintf(out,"%s",read);
-	}
-	
-	while(!feof(in))
-	{
-		fscanf(in,"%s",read);
+		
 		if(strcmp(read,word2)==0)
 			strcpy(read,replace2);
-		fprintf(out,"%s",read);
-	}
-	
-	while(!feof(in))
-	{
-		fscanf(in,"%s",read);
+		
 		if(strcmp(read,word3)==0)
 			strcpy(read,replace3);
 		fprintf(out,"%s",read);
