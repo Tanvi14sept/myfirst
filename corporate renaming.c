@@ -4,6 +4,7 @@
 void main()
 {
 	FILE *in,*out;
+	int i,n;
 	char word[100],ch,read[100],replace[100];
 	int word_len,i,p=0;
 	in=fopen("input.txt","r");
@@ -21,10 +22,15 @@ void main()
 			break;
 		printf("%c",ch);
 	}
-	puts("\n Enter the word to find:");
-	gets(word);
+	puts("enter the no of test cases: ");
+	gets(n);
+	puts("\n Enter the word to find: and  ");
 	puts("Enter the word to replace it with:");
-	gets(replace);
+	for(i=0;i<n;i++)
+	{
+	gets(word[i]);
+	gets(replace[i]);
+	}
 	fprintf(out,"%s - %s\n",word,replace);
 	rewind(in);
 	while(!feof(in))
