@@ -4,7 +4,7 @@ void sort();
 void unique();
 int main()
 { 
-    int cases,i,j,ans; 
+    int cases,i,j,ans,n; 
     printf("how many cases:"); 
     scanf("%d",&cases); 
     for(j=1;j<=cases;j++) 
